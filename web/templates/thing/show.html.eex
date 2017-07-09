@@ -1,0 +1,18 @@
+<h2>Show thing</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @thing.name %>
+  </li>
+
+  <li>
+    <strong>Colors:</strong>
+    <%= @thing.colors %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: thing_path(@conn, :edit, @thing) %>
+<%= link "Back", to: thing_path(@conn, :index) %>
