@@ -13,7 +13,7 @@
 <%= for thing <- @things do %>
     <tr>
       <td><%= thing.name %></td>
-      <td><%= thing.colors %></td>
+      <td><%= Enum.join(thing.colors, ", ") %></td>
 
       <td class="text-right">
         <%= link "Show", to: thing_path(@conn, :show, thing), class: "btn btn-default btn-xs" %>

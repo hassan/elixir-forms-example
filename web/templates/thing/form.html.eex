@@ -12,6 +12,18 @@
   </div>
 
   <div class="form-group">
+    <h2>wierd experiments</h2>
+    1 <%= valid_colors = ["blue", "green", "red"] %><br/>
+    2 <%= @changeset.data.valid_colors %><br/>
+    3 <%= Map.keys(@changeset) |> Enum.join(",") %><br/>
+    4 <%= Map.keys(@changeset.data) |> Enum.join(",") %><br/>
+    5 <%= Map.fetch!(@changeset, :data) |> Map.fetch!(:valid_colors) %><br/>
+
+    <%= multiple_select f, :colors, as_options(valid_colors) %>
+    <%= error_tag f, :colors %>
+  </div>
+
+  <div class="form-group">
     <%= submit "Submit", class: "btn btn-primary" %>
   </div>
 <% end %>

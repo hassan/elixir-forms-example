@@ -1,4 +1,5 @@
 defmodule Example.ThingController do
+  require Logger
   use Example.Web, :controller
 
   alias Example.Thing

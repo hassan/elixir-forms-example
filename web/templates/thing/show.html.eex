@@ -9,7 +9,7 @@
 
   <li>
     <strong>Colors:</strong>
-    <%= @thing.colors %>
+    <%= Enum.join(@thing.colors, ", ") %>
   </li>
 
 </ul>
